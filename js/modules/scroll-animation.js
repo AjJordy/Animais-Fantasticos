@@ -8,6 +8,8 @@ export default function initAnimeScroll() {
         const isSectionVisible = positionToAnimate < 0;
         if (isSectionVisible) {
           section.classList.add("ativo");
+        } else if (section.classList.contains("ativo")) {
+          section.classList.remove("ativo");
         }
         // console.log("sectionTop:", sectionTop);
       });
