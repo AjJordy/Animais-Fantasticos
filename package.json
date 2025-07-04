@@ -1,0 +1,34 @@
+{
+  "name": "animais-fantasticos",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido durante o curso de JavaScript Completo ES6+ da Origamid, utilizando HTML, CSS e JavaScript puro, sem a necessidade de bibliotecas externas. Este projeto foi uma excelente oportunidade para aprimorar minhas habilidades em desenvolvimento front-end, especialmente no uso de JavaScript nativo para criar interações dinâmicas e responsivas.",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AjJordy/Animais-Fantasticos.git"
+  },
+  "author": "Jordy Araujo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AjJordy/Animais-Fantasticos/issues"
+  },
+  "homepage": "https://github.com/AjJordy/Animais-Fantasticos#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.28.0",
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "babel-loader": "^10.0.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-import": "^2.32.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "whatwg-fetch": "^3.6.20"
+  }
+}
