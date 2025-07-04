@@ -2,7 +2,7 @@ import SmoothScroll from "./modules/scroll-smooth.js";
 import Accordion from "./modules/accordion.js";
 import TabNav from "./modules/tabs.js";
 import Modal from "./modules/modal.js";
-import initTooltip from "./modules/tooltip.js";
+import Tooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initAnimeNumbers from "./modules/numbers.js";
@@ -28,7 +28,9 @@ const modal = Modal(
 );
 modal.init();
 
-initTooltip();
+const tooltip = new Tooltip("[data-tooltip]");
+tooltip.init();
+
 initDropdownMenu();
 initMenuMobile();
 initAnimeNumbers();
