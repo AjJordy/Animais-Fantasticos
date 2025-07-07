@@ -5,7 +5,7 @@ import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
-import initAnimeNumbers from "./modules/numbers.js";
+import AnimeNumbers from "./modules/numbers.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import initAnimeScroll from "./modules/scroll-animation.js";
 
@@ -31,8 +31,10 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
+const animeNumbers = new AnimeNumbers();
+animeNumbers.init("[data-numero]", ".numeros", "ativo");
+
 initDropdownMenu();
 initMenuMobile();
-initAnimeNumbers();
 initFuncionamento();
 initAnimeScroll();
