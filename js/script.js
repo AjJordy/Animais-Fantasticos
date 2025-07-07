@@ -3,9 +3,9 @@ import Accordion from "./modules/accordion.js";
 import TabNav from "./modules/tabs.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
+import initFetchAnimais from "./modules/fetch-animais.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
-import AnimeNumbers from "./modules/numbers.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import initAnimeScroll from "./modules/scroll-animation.js";
 
@@ -21,7 +21,7 @@ const tabNav = new TabNav(
 );
 tabNav.init();
 
-const modal = Modal(
+const modal = new Modal(
   '[data-modal="abrir"]',
   '[data-modal="fechar"]',
   '[data-modal="container"]'
@@ -31,8 +31,7 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
-const animeNumbers = new AnimeNumbers();
-animeNumbers.init("[data-numero]", ".numeros", "ativo");
+initFetchAnimais("../../animaisapi.json", ".numeros-grid");
 
 initDropdownMenu();
 initMenuMobile();

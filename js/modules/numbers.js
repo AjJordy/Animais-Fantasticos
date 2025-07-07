@@ -27,7 +27,7 @@ export default class AnimeNumbers {
   }
 
   handleMutation(mutation) {
-    if (mutation[0].target.classList.contains(observerClass)) {
+    if (mutation[0].target.classList.contains(this.observerClass)) {
       this.observer.disconnect();
       this.animeNumbers();
     }

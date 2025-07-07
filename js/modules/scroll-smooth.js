@@ -27,7 +27,7 @@ export default class SmoothScroll {
 
   addLinkEvent() {
     this.linksInternos.forEach((link) => {
-      link.addEventListener("click", scrollToSection);
+      link.addEventListener("click", this.scrollToSection);
     });
   }
 
