@@ -5,10 +5,11 @@ import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import AnimeScroll from "./modules/scroll-animation.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
-import initFetchAnimais from "./modules/fetch-animais.js";
+import fetchAnimais from "./modules/fetch-animais.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
 import MenuMobile from "./modules/menu-mobile.js";
 import Funcionamento from "./modules/funcionamento.js";
+import SlideNav from "./modules/slide.js";
 
 const smoothScroll = new SmoothScroll('[data-menu="suave"] a[href^="#"]');
 smoothScroll.init();
@@ -32,8 +33,6 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
-initFetchAnimais("../../animaisapi.json", ".numeros-grid");
-
 const animeScroll = new AnimeScroll('[data-anime="scroll"]');
 animeScroll.init();
 
@@ -46,4 +45,9 @@ menuMobile.init();
 const funcionamento = new Funcionamento("[data-semana]");
 funcionamento.init();
 
+const slide = new SlideNav(".slide", ".slide-wrapper");
+slide.init();
+slide.addControl(".custom-controls");
+
+fetchAnimais("./animaisapi.json", ".numeros-grid");
 // fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");

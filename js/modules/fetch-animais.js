@@ -1,6 +1,6 @@
 import AnimeNumbers from "./numbers";
 
-export default function initFetchAnimais(url, target) {
+export default function fetchAnimais(url, target) {
   const numerosGrid = document.querySelector(target);
 
   function createAnimal(animal) {

@@ -4,14 +4,9 @@ export default class Accordion {
     this.activeClass = "ativo";
   }
 
-  activeAccordion() {
-    this.classList.toggle(this.activeClass);
-    this.nextElementSibling.classList.toggle(this.activeClass);
-  }
-
   toggleAccordion(item) {
-    item.classList.add(this.activeClass);
-    item.nextElementSibling.classList.add(this.activeClass);
+    item.classList.toggle(this.activeClass);
+    item.nextElementSibling.classList.toggle(this.activeClass);
   }
 
   addAccordionEvents() {
